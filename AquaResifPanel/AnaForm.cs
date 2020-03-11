@@ -36,22 +36,18 @@ namespace AquaResifPanel
 
             if (user.getUserType() == "Admin")
             {
-                MessageBox.Show("Burak Baba geldi");
                 pcbYeniSiparis.Visible = false;
             }
             else if (user.getUserType() == "Yönetici")
             {
-                MessageBox.Show("Yönetici Giriş yaptı");
                 pcbYeniSiparis.Visible = false;
             }
             else if (user.getUserType() == "Personel")
             {
-                MessageBox.Show("Personel Giriş yaptı");
                 pcbYeniSiparis.Visible = false;
             }
             else if (user.getUserType() == "İmalat")
             {
-                MessageBox.Show("İmalat Giriş yaptı");
                 btnKatMain.Visible = false;
                 btnStandartTeklif.Visible = false;
                 btnUrunMain.Visible = false;
