@@ -102,5 +102,15 @@ namespace AquaResifPanel
             siparisGoruntule.Show();
             pcbYeniSiparis.Visible = false;
         }
+
+        private void btnTumSiparisler_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSiparisOlustur_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
