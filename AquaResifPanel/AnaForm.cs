@@ -110,7 +110,8 @@ namespace AquaResifPanel
 
         private void btnSiparisOlustur_Click(object sender, EventArgs e)
         {
-
+            siparisOlusturFormu sOlustur = new siparisOlusturFormu();
+            sOlustur.Show();
         }
     }
 }

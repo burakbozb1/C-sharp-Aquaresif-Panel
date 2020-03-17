@@ -89,6 +89,13 @@
     <Compile Include="siparislerFormu.Designer.cs">
       <DependentUpon>siparislerFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="SiparisObj.cs" />
+    <Compile Include="siparisOlusturFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siparisOlusturFormu.Designer.cs">
+      <DependentUpon>siparisOlusturFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="StandartTeklifForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +138,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="siparisOlusturFormu.resx">
+      <DependentUpon>siparisOlusturFormu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StandartTeklifForm.resx">
       <DependentUpon>StandartTeklifForm.cs</DependentUpon>
     </EmbeddedResource>

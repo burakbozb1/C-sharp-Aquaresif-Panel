@@ -67,7 +67,8 @@ namespace AquaResifPanel
                     mobilyaVeriler[2] = "Eklendi";
                     mobilyaVeriler[3] = "Sehpa";
                     mobilyaVeriler[4] = boy.ToString() + "x" + mobEn.ToString() + "x" + mobYukseklik.ToString() + " " + cmbMobilyaTur.SelectedItem.ToString() + " Sehpa";
-                    mobilyaVeriler[5] = mobilyaGenelFiyat.ToString();
+                    //mobilyaVeriler[5] = mobilyaGenelFiyat.ToString();
+                    mobilyaVeriler[5] = mobilyaToplamFiyat.ToString();
                     mobilyaVeriler[6] = "AquaResif";
                     mobilyaVeriler[7] = "1";
 
@@ -79,6 +80,30 @@ namespace AquaResifPanel
                         mobilyaVeriler[5],
                         mobilyaVeriler[6],
                         mobilyaVeriler[7]);
+
+                    if (cmbDemirTuru.SelectedItem.ToString()!="Konsol Yok")
+                    {
+                        string[] konsolVeriler = new string[8];
+                        konsolVeriler[0] = "Eklendi";
+                        konsolVeriler[1] = "Konsol";
+                        konsolVeriler[2] = "Eklendi";
+                        konsolVeriler[3] = "Konsol";
+                        konsolVeriler[4] = cmbDemirTuru.SelectedItem.ToString() + " Konsol - Mobilya içerisinde kullanılacak";
+                        //mobilyaVeriler[5] = mobilyaGenelFiyat.ToString();
+                        konsolVeriler[5] = demirToplamFiyat.ToString();
+                        konsolVeriler[6] = "AquaResif";
+                        konsolVeriler[7] = "1";
+
+                        dtSecilenUrunler.Rows.Add(konsolVeriler[0],
+                            konsolVeriler[1],
+                            konsolVeriler[2],
+                            konsolVeriler[3],
+                            konsolVeriler[4],
+                            konsolVeriler[5],
+                            konsolVeriler[6],
+                            konsolVeriler[7]);
+                    }
+                    
 
                     dtTeklifUrunler.DataSource = dtSecilenUrunler;
                 }
@@ -311,25 +336,48 @@ namespace AquaResifPanel
                     a = "NOT: AKVARYUM BOYU 1 METREDEN KÜÇÜK OLAN AKVARYUMLAR İÇİN MOBİLYA BOYU 1 METRE OLARAK HESAPLANMAKTADIR" + "\n\n";
                 }
                 mobilyaHesapla();
-                MessageBox.Show(a +
-                "Alt Mobilya Toplam Alan = " + mobToplamAlan.ToString() + "\n" +
-                "Alt Mobilya Toplam Fiyat: " + (mobToplamAlan * Convert.ToDouble(mobilyaBirimFiyat)).ToString() + "\n\n" +
-                //(mobToplamAlan * Convert.ToDouble(mobilyaBirimFiyat))
-                "Taç toplam Alan = " + tacToplamAlan.ToString() + "\n" +
-                "Taç toplam Fiyat = " + (tacToplamAlan * Convert.ToDouble(mobilyaBirimFiyat)).ToString() + "\n\n" +
-                //(tacToplamAlan * Convert.ToDouble(mobilyaBirimFiyat))
+                if (demirToplamFiyat.ToString() != "0")
+                {
+                    MessageBox.Show(a +
+                    "Alt Mobilya Toplam Alan = " + mobToplamAlan.ToString() + "\n" +
+                    "Alt Mobilya Toplam Fiyat: " + (mobToplamAlan * Convert.ToDouble(mobilyaBirimFiyat)).ToString() + "\n\n" +
+                    //(mobToplamAlan * Convert.ToDouble(mobilyaBirimFiyat))
+                    "Taç toplam Alan = " + tacToplamAlan.ToString() + "\n" +
+                    "Taç toplam Fiyat = " + (tacToplamAlan * Convert.ToDouble(mobilyaBirimFiyat)).ToString() + "\n\n" +
+                    //(tacToplamAlan * Convert.ToDouble(mobilyaBirimFiyat))
 
-                "Arkalık toplam Fiyat = " + arkalikFiyat.ToString() + "\n\n" +
+                    "Arkalık toplam Fiyat = " + arkalikFiyat.ToString() + "\n\n" +
 
-                "Kulp ve menteşe toplam fiyat:" + kulpMenteseToplam.ToString() + "\n\n" +
-                //arkalikFiyat + kulpMenteseToplam
+                    "Kulp ve menteşe toplam fiyat:" + kulpMenteseToplam.ToString() + "\n\n" +
+                    //arkalikFiyat + kulpMenteseToplam
 
-                "Demir Toplam uzunluk: " + demirToplamUzunluk.ToString() + "\n" +
-                "Demir Profil Adet: " + demirProfilAdet.ToString() + "\n" +
-                "Demir Toplam Fiyat: " + demirToplamFiyat.ToString() + "\n\n" +
+                    "Demir Toplam uzunluk: " + demirToplamUzunluk.ToString() + "\n" +
+                    "Demir Profil Adet: " + demirProfilAdet.ToString() + "\n" +
+                    "Demir Toplam Fiyat: " + demirToplamFiyat.ToString() + "\n\n" +
 
-                "Mobilya Genel Fiyat: " + mobilyaGenelFiyat.ToString()
-                );
+                    "Mobilya Genel Fiyat: " + mobilyaGenelFiyat.ToString()
+                    );
+                }
+                else
+                {
+                    MessageBox.Show(a +
+                    "Alt Mobilya Toplam Alan = " + mobToplamAlan.ToString() + "\n" +
+                    "Alt Mobilya Toplam Fiyat: " + (mobToplamAlan * Convert.ToDouble(mobilyaBirimFiyat)).ToString() + "\n\n" +
+                    //(mobToplamAlan * Convert.ToDouble(mobilyaBirimFiyat))
+                    "Taç toplam Alan = " + tacToplamAlan.ToString() + "\n" +
+                    "Taç toplam Fiyat = " + (tacToplamAlan * Convert.ToDouble(mobilyaBirimFiyat)).ToString() + "\n\n" +
+                    //(tacToplamAlan * Convert.ToDouble(mobilyaBirimFiyat))
+
+                    "Arkalık toplam Fiyat = " + arkalikFiyat.ToString() + "\n\n" +
+
+                    "Kulp ve menteşe toplam fiyat:" + kulpMenteseToplam.ToString() + "\n\n" +
+                    //arkalikFiyat + kulpMenteseToplam
+
+                    "Demir Konsol Kullanılmamıştır" + "\n\n" +
+
+                    "Mobilya Genel Fiyat: " + mobilyaGenelFiyat.ToString());
+                }
+
             }
             catch (Exception err)
             {
@@ -1270,12 +1318,12 @@ namespace AquaResifPanel
 
 
             //---
-            string dosyaAdi = teklifNo + " - Teklif -" + tarih+".xlsx";
+            string dosyaAdi = teklifNo + " - Teklif -" + tarih + ".xlsx";
             calismaKitabi.SaveAs(dosyaAdi, Excel.XlFileFormat.xlWorkbookDefault);
             excelDosya.Workbooks.Close();
             excelDosya.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(excelDosya);
-            MessageBox.Show("Bitti");
+            //MessageBox.Show("Bitti");
 
             //---
 
@@ -1383,7 +1431,7 @@ namespace AquaResifPanel
             MessageBox.Show("Teklif dosyası belgelerim klasörüne teklif numarası ile kaydedilmiştir. \n" +
                 "Form kapatılacak");
             this.Close();
-            
+
         }
 
         private void btnAkvaryumEkle_Click(object sender, EventArgs e)
@@ -1489,6 +1537,7 @@ namespace AquaResifPanel
                 //22
             }
 
+
             //MessageBox.Show(mobilyaBirimFiyat.ToString());
 
             if (Convert.ToInt32(txtBoy.Text) < 100)
@@ -1581,6 +1630,11 @@ Ağaç Konsol
             else if (demirKonsolTuru == "Ağaç Konsol")
             {
                 demirBirimFiyat = birimFiyatlar[27];
+            }
+
+            else if (demirKonsolTuru == "Konsol Yok")
+            {
+                demirBirimFiyat = 0;
             }
 
 

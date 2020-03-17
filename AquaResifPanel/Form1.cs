@@ -30,7 +30,8 @@ namespace AquaResifPanel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtKadi.Text = "boz";
+            txtSfr.Text = "1234";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

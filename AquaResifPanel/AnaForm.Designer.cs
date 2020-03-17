@@ -75,7 +75,7 @@
             // 
             this.btnUrunMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunMain.Location = new System.Drawing.Point(377, 150);
-            this.btnUrunMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUrunMain.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunMain.Name = "btnUrunMain";
             this.btnUrunMain.Size = new System.Drawing.Size(604, 55);
             this.btnUrunMain.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.btnKatMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKatMain.Location = new System.Drawing.Point(377, 87);
-            this.btnKatMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKatMain.Margin = new System.Windows.Forms.Padding(4);
             this.btnKatMain.Name = "btnKatMain";
             this.btnKatMain.Size = new System.Drawing.Size(604, 55);
             this.btnKatMain.TabIndex = 3;
@@ -99,7 +99,7 @@
             // 
             this.btnStandartTeklif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnStandartTeklif.Location = new System.Drawing.Point(377, 213);
-            this.btnStandartTeklif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStandartTeklif.Margin = new System.Windows.Forms.Padding(4);
             this.btnStandartTeklif.Name = "btnStandartTeklif";
             this.btnStandartTeklif.Size = new System.Drawing.Size(604, 55);
             this.btnStandartTeklif.TabIndex = 4;
@@ -149,7 +149,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(44, 87);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(284, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +182,6 @@
             // 
             // btnSiparisOlustur
             // 
-            this.btnSiparisOlustur.Enabled = false;
             this.btnSiparisOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSiparisOlustur.Location = new System.Drawing.Point(377, 454);
             this.btnSiparisOlustur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -213,7 +212,7 @@
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.lblHos);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AnaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aquaresif Panel";
